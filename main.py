@@ -1,10 +1,10 @@
-import os #system commands
-import smtplib #smtp protocol
-import time #time parameters
+import os  # system commands
+import smtplib  # smtp protocol
+import time  # time parameters
 
-import pyaudio #portaudio bindings
-import pyttsx3 #OFFLINE Python Text to Speech library
-import speech_recognition as sr #Library for speech recognition
+import pyaudio  # portaudio bindings
+import pyttsx3  # OFFLINE Python Text to Speech library
+import speech_recognition as sr  # Library for speech recognition
 
 '''
 Initialize sr and speech-engine
@@ -56,4 +56,3 @@ print (msg) # Show received message
 
 server.sendmail("Your Email ID", command, msg) #Send mail with values for message and receiver id where Your Email ID = exp@exp.com
 server.quit() # Quit server
-
