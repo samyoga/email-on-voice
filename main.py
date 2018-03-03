@@ -37,7 +37,7 @@ engine.runAndWait()
 
 server = smtplib.SMTP('smtp.gmail.com', 587) #Gamil host with portname
 server.starttls() #to TLS mode
-server.login("Your Email ID", "Your password") #Email id of the sender
+server.login("Your Email ID", "Your password") #Email id of the sender where Your Email ID = exp@exp.com && Your password = exp123
 
 '''
 Speaker send out info to enter the message then the microphone will start to receive the text
@@ -54,4 +54,6 @@ with sr.Microphone(device_index= None) as source:
 msg = r.recognize_google(audio) # Run Speech to text on message
 print (msg) # Show received message
 
+server.sendmail("Your Email ID", command, msg) #Send mail with values for message and receiver id where Your Email ID = exp@exp.com
+server.quit() # Quit server
 
