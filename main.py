@@ -35,5 +35,19 @@ describe = "Sending message to" + command
 engine.say(describe)
 engine.runAndWait()
 
+server = smtplib.SMTP('smtp.gmail.com', 587) #Gamil host with portname
+server.starttls() #to TLS mode
+server.login("Your Email ID", "Your password") #Email id of the sender
 
+'''
+Speaker send out info to enter the message then the microphone will start to receive the text
+'''
+with sr.Microphone(device_index= None) as source:
+    r.adjust_for_ambient_noise(source)
+    engine.say("Message to be sent")
+    engine.runAndWait()
+    time.sleep(5)
+    audio = r.listen(source)
+    engine.say("Got it!")
+    engine.runAndWait()
 
