@@ -51,3 +51,7 @@ with sr.Microphone(device_index= None) as source:
     engine.say("Got it!")
     engine.runAndWait()
 
+msg = r.recognize_google(audio) # Run Speech to text on message
+print (msg) # Show received message
+
+
