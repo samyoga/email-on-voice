@@ -27,7 +27,7 @@ with sr.Microphone(device_index= None) as source: #Start microphone for email in
 
 command = r.recognize_google(audio) #Google-recognizition API call for Audio
 command = command.replace(" ", "") #seperation of username and domain
-
+print(command)
 '''
 Speaker says that following user will receive the email
 '''
