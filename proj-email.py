@@ -1,6 +1,3 @@
-#Python Email GUI Project by Dashvin Singh
-#April 24 2017
-
 from email import message_from_string
 from tkinter import *
 from tkinter import messagebox, Text
@@ -57,7 +54,7 @@ class Email():
 class Email_GUI:
     def __init__(self, master, email):
         self.frame = Frame(master)
-        master.title('Python Email, by DS')
+        master.title('Python Email')
         self.email = email
         master.minsize(width = 400, height = 400)
         master.config(bg = 'cyan')
