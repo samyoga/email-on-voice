@@ -8,7 +8,7 @@ def sendemail():
     try:
         
         sender = account.get()
-        recepient = [receiver.get()]
+        recipient = [receiver.get()]
         sub = subject.get()
         pswrd = password.get()
         msg = msgbody.get('1.0','end')
